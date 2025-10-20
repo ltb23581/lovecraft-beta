@@ -1,0 +1,155 @@
+.hero-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#details .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#details .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  text-align: left;
+}
+
+#details .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#details .card img {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+
+#details .card h4 {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  min-height: 4rem;
+}
+
+#details .card ul {
+  padding-left: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#details .card li {
+  margin-bottom: 0.5rem;
+}
+
+#details .card,
+#details .card-body,
+#details .card h4,
+#details .card p,
+#details .card ul,
+#details .card li {
+  text-align: left !important;
+}
+
+
+
+#details {
+  margin-top: 0;
+  padding-top: 10rem;
+  background-color: var(--lovecraft-teal);
+  position: relative;
+  z-index: 1;
+}
+
+/* 🧩 Make team cards equal height */
+#team .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#team .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+#team .card-img-top {
+  height: 400px;
+  object-fit: cover;
+}
+
+#team .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+#checkpoint-one .row,
+#checkpoint-two .row,
+#checkpoint-three .row,
+#checkpoint-four .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; 
+}
+
+#checkpoint-one .col-md-4,
+#checkpoint-two .col-md-4,
+#checkpoint-three .col-md-4,
+#checkpoint-four .col-md-4 {
+  display: flex;
+}
+
+#checkpoint-one .card,
+#checkpoint-two .card,
+#checkpoint-three .card,
+#checkpoint-four .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+#checkpoint-one .card-img-top,
+#checkpoint-two .card-img-top,
+#checkpoint-three .card-img-top,
+#checkpoint-four .card-img-top {
+  height: 350px; 
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+#checkpoint-one .card-body,
+#checkpoint-two .card-body,
+#checkpoint-three .card-body,
+#checkpoint-four .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+#checkpoint-one h4,
+#checkpoint-two h4,
+#checkpoint-three h4,
+#checkpoint-four h4 {
+  margin-bottom: 0.75rem;
+}
