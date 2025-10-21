@@ -9,5 +9,5 @@ This repository contains the **beta version** of our redesigned website for **Lo
 
 ## 🚀 Deployment
 
-🔗 **Live Preview:** [UGA NMI Capstone – Love.Craft Beta]([https://ltb23581.github.io/lovecraft-beta/](https://projects.nmi.cool/2025/nmc/lovecraft/?))
+🔗 **Live Preview:** [UGA NMI Capstone – Love.Craft Beta]((https://projects.nmi.cool/2025/nmc/lovecraft/?))
 
