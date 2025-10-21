@@ -252,7 +252,7 @@ button, .btn {
 /* Heart icon in team cards */
 .heart-icon {
   position: absolute;
-  bottom: 0%;
+  top: 0%;
   right: 0%;
   width: 70px; 
   z-index: 2;
@@ -475,3 +475,7 @@ button, .btn {
 .checkpoint-section:nth-of-type(even)::after {
   background: rgba(244, 239, 223, 0.35);
 }
+
+
+
+
