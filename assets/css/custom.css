@@ -249,6 +249,21 @@ button, .btn {
   line-height: 1.6;
 }
 
+/* Heart icon in team cards */
+.heart-icon {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  width: 70px; /* adjust size */
+  z-index: 2;
+}
+
+.checkpoint-card {
+  position: relative;
+  overflow: hidden;
+}
+
+
 /* Responsive grid */
 @media (max-width: 1200px) {
   #team .col-md-4 {
