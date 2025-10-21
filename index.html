@@ -76,7 +76,7 @@
 
       <section class="hero-section" style="padding-top: 10rem;">
         <!--This div contains the swoopy bit in the background of the hero unit.-->
-<div class="hero-bg" style="background-image: url('assets/img/hero/background.png');"></div>
+      <div class="hero-bg" style="background-image: url('assets/img/hero/background.png');"></div>
         
         <div class="container">
           <div class="row align-items-center">
@@ -96,7 +96,10 @@
                   <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                       <!--The YouTube link here sets the video that plays in the pop-up modal triggered by "Play Demo".-->
-                      <iframe class="rounded" style="width:100%;max-height:500px;" height="500px" src="/assets/video/Demo.mp4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                      <video class="rounded" style="width:100%;max-height:500px;" height="500" controls>
+                        <source src="assets/video/Demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
                     </div>
                   </div>
                 </div>
