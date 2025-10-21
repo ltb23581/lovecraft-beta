@@ -1,3 +1,53 @@
+/* ================================ */
+/*         FONT IMPORTS             */
+/* ================================ */
+@font-face {
+  font-family: 'CS Gordon';
+  src: url('assets/fonts/CSGordon-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ================================ */
+/*         TYPOGRAPHY SYSTEM        */
+/* ================================ */
+:root {
+  --font-heading: 'Baloo Bhaijaan 2', cursive;
+  --font-sub: 'Baloo Bhaijaan 2', cursive;
+  --font-body: 'Century Gothic', 'Gill Sans', 'Arial', sans-serif;
+}
+
+
+/* Global font setup */
+body {
+  font-family: var(--font-body);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--lovecraft-teal);
+}
+
+/* Subheadings or emphasized text */
+.section-subtitle, .highlight {
+  font-family: var(--font-sub);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons and UI text */
+button, .btn {
+  font-family: var(--font-sub);
+  font-weight: 600;
+}
+
+/* ================================ */
+/*       GLOBAL & HERO SECTION      */
+/* ================================ */
 .hero-bg {
   background-size: cover;
   background-position: center;
@@ -10,64 +60,9 @@
   z-index: 0;
 }
 
-#details .row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-#details .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-  text-align: left;
-}
-
-#details .card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-#details .card img {
-  display: block;
-  margin: 0 auto 1.5rem auto;
-}
-
-#details .card h4 {
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  min-height: 4rem;
-}
-
-#details .card ul {
-  padding-left: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-#details .card li {
-  margin-bottom: 0.5rem;
-}
-
-#details .card,
-#details .card-body,
-#details .card h4,
-#details .card p,
-#details .card ul,
-#details .card li {
-  text-align: left !important;
-}
-
-
-
+/* ================================ */
+/*          DETAILS SECTION         */
+/* ================================ */
 #details {
   margin-top: 0;
   padding-top: 10rem;
@@ -76,39 +71,220 @@
   z-index: 1;
 }
 
-/* 🧩 Make team cards equal height */
+#details .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+#details .checkpoint-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem 1.75rem;
+  height: 100%;
+  transition: all 0.25s ease;
+}
+
+#details .checkpoint-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+#details .checkpoint-icon {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  background: #f4efdf;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+#details .checkpoint-card h4 {
+  color: var(--lovecraft-teal);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+#details .checkpoint-card ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  text-align: left;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #details .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  #details .col-lg-3 {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
+
+/* ================================ */
+/*       UNIFIED SECTION STYLES     */
+/* ================================ */
+.checkpoint-section {
+  background-color: #f4efdf;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkpoint-section:nth-of-type(even) {
+  background-color: var(--lovecraft-teal);
+}
+
+.section-subtitle {
+  color: var(--lovecraft-yellow);
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: var(--lovecraft-dark);
+}
+
+/* ================================ */
+/*          CHECKPOINT CARDS        */
+/* ================================ */
+.checkpoint-card {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: var(--lovecraft-dark);
+  padding: 2rem 1.5rem;
+  transition: all 0.25s ease;
+  height: 100%;
+  text-align: center;
+}
+
+.checkpoint-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.checkpoint-icon {
+  width: 90px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  background-color: #f4efdf;
+  padding: 0.75rem;
+}
+
+.checkpoint-card h4 {
+  color: var(--lovecraft-teal);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.checkpoint-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ================================ */
+/*            TEAM SECTION          */
+/* ================================ */
 #team .row {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+  justify-content: center;
+  row-gap: 2.5rem;
 }
 
-#team .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
+#team .col-md-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 1.5rem;
 }
 
-#team .card-img-top {
-  height: 400px;
+#team .checkpoint-card {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+}
+
+#team .checkpoint-icon {
+  width: 100%;
+  height: 320px;
   object-fit: cover;
+  border-radius: 14px;
+  background: none;
+  padding: 0;
 }
 
-#team .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;
+#team .checkpoint-card h4 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: var(--lovecraft-teal);
 }
 
+#team .checkpoint-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive grid */
+@media (max-width: 1200px) {
+  #team .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #team .col-md-4 {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+
+  #team .checkpoint-card {
+    padding: 1.5rem 1.75rem;
+  }
+
+  #team .checkpoint-card p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+}
+
+/* ================================ */
+/*          CHECKPOINT GRIDS        */
+/* ================================ */
 #checkpoint-one .row,
 #checkpoint-two .row,
 #checkpoint-three .row,
 #checkpoint-four .row {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch; 
+  align-items: stretch;
+  justify-content: center;
+  row-gap: 2.5rem;
 }
 
 #checkpoint-one .col-md-4,
@@ -116,6 +292,9 @@
 #checkpoint-three .col-md-4,
 #checkpoint-four .col-md-4 {
   display: flex;
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 1.5rem;
 }
 
 #checkpoint-one .card,
@@ -126,30 +305,158 @@
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
+  border-radius: 18px;
 }
 
-#checkpoint-one .card-img-top,
-#checkpoint-two .card-img-top,
-#checkpoint-three .card-img-top,
-#checkpoint-four .card-img-top {
-  height: 350px; 
-  object-fit: cover;
-  margin-bottom: 1rem;
+/* Responsive */
+@media (max-width: 992px) {
+  #checkpoint-one .col-md-4,
+  #checkpoint-two .col-md-4,
+  #checkpoint-three .col-md-4,
+  #checkpoint-four .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
-#checkpoint-one .card-body,
-#checkpoint-two .card-body,
-#checkpoint-three .card-body,
-#checkpoint-four .card-body {
+@media (max-width: 600px) {
+  #checkpoint-one .col-md-4,
+  #checkpoint-two .col-md-4,
+  #checkpoint-three .col-md-4,
+  #checkpoint-four .col-md-4 {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
+
+/* ================================ */
+/*          SUBSCRIBE SECTION       */
+/* ================================ */
+.subscribe-section {
+  background-color: #f4efdf;
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.subscribe-box {
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe-heart {
+  width: 70px;
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  opacity: 0.15;
+}
+
+.subscribe-text {
+  color: var(--lovecraft-teal);
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.subscribe-text .highlight {
+  color: var(--lovecraft-yellow);
+  font-weight: 700;
+}
+
+.subscribe-form {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-#checkpoint-one h4,
-#checkpoint-two h4,
-#checkpoint-three h4,
-#checkpoint-four h4 {
-  margin-bottom: 0.75rem;
+.subscribe-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--lovecraft-teal);
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.subscribe-input:focus {
+  border-color: var(--lovecraft-yellow);
+  box-shadow: 0 0 0 3px rgba(255, 230, 150, 0.3);
+}
+
+.subscribe-btn {
+  background: linear-gradient(135deg, #ff9b6a, #ff7f50);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: linear-gradient(135deg, #ff7f50, #ff5a2a);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subscribe-box {
+    padding: 2.5rem 1.5rem;
+  }
+  .subscribe-text {
+    font-size: 1.1rem;
+  }
+  .subscribe-input {
+    width: 80%;
+  }
+}
+
+/* ================================ */
+/*    Decorative Background Bubbles */
+/* ================================ */
+.checkpoint-section::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: -70px;
+  width: 200px;
+  height: 200px;
+  background: var(--lovecraft-yellow);
+  opacity: 0.25;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.checkpoint-section::after {
+  content: "";
+  position: absolute;
+  bottom: -90px;
+  right: -90px;
+  width: 240px;
+  height: 240px;
+  background: #ffffff;
+  opacity: 0.15;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Alternate bubble colors for teal sections */
+.checkpoint-section:nth-of-type(even)::before {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.checkpoint-section:nth-of-type(even)::after {
+  background: rgba(244, 239, 223, 0.35);
 }
