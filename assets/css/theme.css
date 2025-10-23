@@ -9405,7 +9405,7 @@ fieldset:disabled .btn {
 
 .pb-0 {
   padding-bottom: 0 !important;
-  background-color: #f4efdf;
+  background-color: #f4efdf !important;
 }
 
 .pb-1 {
