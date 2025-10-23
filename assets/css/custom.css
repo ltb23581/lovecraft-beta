@@ -2,8 +2,8 @@
 /*         FONT IMPORTS             */
 /* ================================ */
 @font-face {
-  font-family: 'CS Gordon';
-  src: url('assets/fonts/CSGordon-Regular.otf') format('opentype');
+  font-family: "CS Gordon";
+  src: url("assets/fonts/CSGordon-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,11 +12,10 @@
 /*         TYPOGRAPHY SYSTEM        */
 /* ================================ */
 :root {
-  --font-heading: 'Baloo Bhaijaan 2', cursive;
-  --font-sub: 'Baloo Bhaijaan 2', cursive;
-  --font-body: 'Century Gothic', 'Gill Sans', 'Arial', sans-serif;
+  --font-heading: "Baloo Bhaijaan 2", cursive;
+  --font-sub: "Baloo Bhaijaan 2", cursive;
+  --font-body: "Century Gothic", "Gill Sans", "Arial", sans-serif;
 }
-
 
 /* Global font setup */
 body {
@@ -26,21 +25,27 @@ body {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--lovecraft-teal);
 }
 
 /* Subheadings or emphasized text */
-.section-subtitle, .highlight {
+.section-subtitle,
+.highlight {
   font-family: var(--font-sub);
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 /* Buttons and UI text */
-button, .btn {
+button,
+.btn {
   font-family: var(--font-sub);
   font-weight: 600;
 }
@@ -254,7 +259,7 @@ button, .btn {
   position: absolute;
   top: 0%;
   right: 0%;
-  width: 70px; 
+  width: 70px;
   z-index: 2;
 }
 
@@ -262,7 +267,6 @@ button, .btn {
   position: relative;
   overflow: hidden;
 }
-
 
 /* Responsive grid */
 @media (max-width: 1200px) {
@@ -368,7 +372,7 @@ button, .btn {
   position: absolute;
   top: 0%;
   right: 0%;
-  width: 70px; 
+  width: 70px;
   z-index: 2;
 }
 
@@ -477,9 +481,53 @@ button, .btn {
 }
 
 /* Heart Icon for Footer */
-  /* .heart-icon-footer {
+/* .heart-icon-footer {
   width: 40px;
   } */
 
+/* ================================ */
+/*           FOOTER FIX             */
+/* ================================ */
+.pb-0.pb-lg-4 {
+  background-color: #f4efdf !important;
+  color: var(--lovecraft-dark);
+}
 
+.py-5 {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+  background-color: #f4efdf !important;
+}
 
+.link-900 {
+  color: var(--lovecraft-dark) !important;
+}
+
+.text-secondary {
+  color: var(--lovecraft-dark) !important;
+}
+
+/* ================================ */
+/*              NAVBAR              */
+/* ================================ */
+.navbar {
+  background-color: var(--lovecraft-light) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: none !important;
+  transition: background-color 0.3s ease;
+}
+
+[data-navbar-on-scroll] {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: none !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: var(--lovecraft-dark) !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--lovecraft-yellow) !important;
+}
