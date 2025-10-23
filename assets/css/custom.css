@@ -476,6 +476,10 @@ button, .btn {
   background: rgba(244, 239, 223, 0.35);
 }
 
+/* Heart Icon for Footer */
+  .heart-icon-footer {
+  width: 60px;
+  }
 
 
 

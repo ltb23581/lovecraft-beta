@@ -18,7 +18,7 @@
   /* You can customize brand-primary and brand-primary-darker to customize the primary brand color throughout */
   --lovecraft-teal: #59a2a6;
   --lovecraft-yellow: #c7bd51;
-  --lovecraft-dark: #212121;
+  --lovecraft-dark: #454646;
   --lovecraft-light: #e5e3e3;
   --lovecraft-pink: #ab496b;
 
@@ -219,7 +219,8 @@ sup {
 }
 
 a {
-  color: var(--lovecraft-teal);
+  color: var(--lovecraft-dark);
+  font-size: 1.3rem;
   text-decoration: none;
 }
 
@@ -9260,6 +9261,7 @@ fieldset:disabled .btn {
 .py-5 {
   padding-top: 2.5rem !important;
   padding-bottom: 2.5rem !important;
+  background-color: #f4efdf;
 }
 
 .py-6 {
@@ -9403,6 +9405,7 @@ fieldset:disabled .btn {
 
 .pb-0 {
   padding-bottom: 0 !important;
+  background-color: #f4efdf;
 }
 
 .pb-1 {
@@ -9717,7 +9720,7 @@ fieldset:disabled .btn {
 }
 
 .text-secondary {
-  color: #5E6282 !important;
+  color: var(--lovecraft-dark) !important;
 }
 
 .text-success {
@@ -18956,7 +18959,7 @@ iframe {
 }
 
 .link-900 {
-  color: #5E6282 !important;
+  color: var(--lovecraft-dark) !important;
 }
 
 .link-900:hover, .link-900:focus {
